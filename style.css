@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #6C48A2;
+}
+.principal h2{
+    color: #ddd;
+  
+}
+.principal{
+    color: #ddd;
+  
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   
+}
+.center-button{
+    display: flex;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+#notaFiscal {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    
+}
+
+
+#notaFiscal p {
+    margin: 8px 0;
+}
+
+#notaFiscal strong {
+    font-weight: bold;
+}
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+}
