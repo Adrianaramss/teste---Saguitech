@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissão de Nota Fiscal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="principal">
+
+    <form id="notaFiscalForm">
+        <h2>Emitir Nota Fiscal</h2>
+        <br/>
+
+        <label for="nomeCliente">Nome do Cliente:</label>
+        <input type="text" id="nomeCliente" required>
+
+        <label for="descricaoserviço">Descrição do Serviço ou Produto:</label>
+        <input type="text" id="descricaoserviço" required>
+
+        <label for="valorServico">Valor do Serviço (R$):</label>
+        <input type="number" id="valorServico" required step="0.01">
+
+        <label for="aliquota">Porcentagem de Imposto (%):</label>
+        <input type="number" id="aliquota" required step="0.1">
+    <div class="center-button" >
+        <button type="button" onclick="calcularNotaFiscal()">Emitir Nota Fiscal</button>
+    </div>
+    </form>
+
+    <script>
+        function calcularNotaFiscal() {
+
+            const nomeCliente = document.getElementById('nomeCliente').value;
+            const descricaoserviço = document.getElementById('descricaoserviço').value;
+            const valorServico = parseFloat(document.getElementById('valorServico').value);
+            const aliquota = parseFloat(document.getElementById('aliquota').value);
+
+            const valorImposto = (valorServico * (aliquota / 100)).toFixed(2);
+            const valorTotal = (valorServico + parseFloat(valorImposto)).toFixed(2);
+
+            window.location.href = `nota.html?nomeCliente=${nomeCliente}&descricaoserviço=${descricaoserviço}&valorServico=${valorServico}&aliquota=${aliquota}&valorImposto=${valorImposto}&valorTotal=${valorTotal}`;
+        }
+    </script>
+</body>
+</html>

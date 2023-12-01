@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota Fiscal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="notaFiscal">
+        <h2>Nota Fiscal</h2>
+        <br/>
+        <p><strong>Nome do Cliente:</strong> <span id="nomeCliente"></span></p>
+        <p><strong>Descrição do Serviço ou Produto:</strong> <span id="descricaoserviço"></span></p>
+        <p><strong>Valor do Serviço:</strong> R$ <span id="valorServicoNota"></span></p>
+        <p><strong>Porcentagem do Imposto:</strong> <span id="aliquotaNota"></span>%</p>
+        <p><strong>Valor do Imposto:</strong> R$ <span id="valorImposto"></span></p>
+        <p><strong>Valor Total:</strong> R$ <span id="valorTotal"></span></p>
+
+        <a href="index.html">Voltar</a>
+        
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nomeCliente = urlParams.get('nomeCliente'); 
+        const descricaoserviço = urlParams.get('descricaoserviço')
+        const valorServico = urlParams.get('valorServico');
+        const aliquota = urlParams.get('aliquota');
+        const valorImposto = urlParams.get('valorImposto');
+        const valorTotal = urlParams.get('valorTotal');
+
+        document.getElementById('nomeCliente').textContent = nomeCliente; 
+        document.getElementById('descricaoserviço').textContent = descricaoserviço
+        document.getElementById('valorServicoNota').textContent = valorServico;
+        document.getElementById('aliquotaNota').textContent = aliquota;
+        document.getElementById('valorImposto').textContent = valorImposto;
+        document.getElementById('valorTotal').textContent = valorTotal;
+    </script>
+</body>
+</html>
