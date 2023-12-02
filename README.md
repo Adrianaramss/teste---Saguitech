@@ -39,13 +39,13 @@ O projeto consiste em um sistema que emite nota fiscal quando são requisitados 
 ### Instalando
 ```bash
 # Clone repositório
-git clone
+git clone https://github.com/Adrianaramss/teste---Saguitech.git
 
-# Instalando dependências
-npm install
+# abra o terminal e execute o seguinte comando
+npm install -g http-server
 
-# executando o projeto
-npm run start
+# Depois de instalar o http-server, inicie o servidor web:
+http-server 
 ```
 # 📫 Contato
 E-mail - adrianascosta9@gmail.com
